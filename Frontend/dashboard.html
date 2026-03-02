@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Storage Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-header">
+    <div class="logo">
+        ☁ Cloud Storage
+    </div>
+
+    <div class="user-panel">
+        <div class="user-info">
+            <span class="user-email" id="userEmail"></span>
+            <span class="role-badge" id="userRole"></span>
+        </div>
+
+        <button class="logout-btn" onclick ="logout()">
+            ⎋
+        </button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+
+    <div class="card">
+        <h3>Upload File</h3>
+        <input type="file" id="file">
+        <input type="text" id="tags" placeholder="Enter tags (comma separated)">
+        <button class="primary-btn" onclick="upload()">Upload</button>
+    </div>
+
+    <div class="card">
+        <h3>Filter Files</h3>
+        <input type="text" id="filterTag" placeholder="Filter by tag">
+        <button class="primary-btn" onclick="loadFiles()">Apply</button>
+        <button class="secondary-btn" onclick="loadFiles()">Refresh</button>
+    </div>
+
+    <div class="card">
+        <h3>My Files</h3>
+        <ul id="fileList" class="file-list"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

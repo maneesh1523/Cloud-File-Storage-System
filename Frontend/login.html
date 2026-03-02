@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud File Storage - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+<div class="login-wrapper">
+
+    <div class="login-card">
+        <h2>☁ Cloud File Storage</h2>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button class="primary-btn" onclick="login()">Login</button>
+        <button class="secondary-btn" onclick="signup()">Create Account</button>
+
+        <div class="otp-section">
+            <h4>OTP Verification</h4>
+            <input type="text" id="otp" placeholder="Enter OTP">
+            <button class="primary-btn" onclick="confirmOtp()">Verify OTP</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/amazon-cognito-identity-js@6.3.3/dist/amazon-cognito-identity.min.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
